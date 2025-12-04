@@ -11,7 +11,7 @@
 </head>
  <link rel="stylesheet" href="styles.css">
 
-<body class="">
+<body class="not-loaded">
   <div class="night"></div>
   <div class="flowers">
     <div class="flower flower--1">
@@ -311,3 +311,14 @@
   </div>
 </body>
  </html>
+
+<script>
+ 
+onload = () => {
+  const c = setTimeout(() => {
+    document.body.classList.remove("not-loaded");
+    clearTimeout(c);
+  }, 1000);
+};
+
+</script>
